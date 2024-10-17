@@ -20,6 +20,13 @@
             align-items: center;
         }
 
+        .container {
+            display: flex;
+            flex-direction: row;
+            height: 100vh; /* Optional: Adjust for vertical size */
+            gap: 10px;    /* Spacing between sections */
+        }
+
         /* Section Styling */
         .section {
             padding: 15px;
@@ -30,32 +37,28 @@
             flex-direction: column;
         }
 
-        /* Section 1: 10% height */
+        /* Section 1: 10% width */
         .chat-details {
-            flex-direction: column;
-            flex: 1; /* 10% of the height */
+            flex: 1; /* 10% of the width */
             background-color: #e3f2fd;
         }
 
-        /* Section 2: 40% height */
+        /* Section 2: 40% width */
         .contact-info {
-            flex-direction: column;
-            flex: 4; /* 40% of the height */
+            flex: 4; /* 40% of the width */
             background-color: #ffecb3;
             overflow-y: auto;
         }
 
-        /* Section 3: 30% height */
+        /* Section 3: 30% width */
         .order-info {
-            flex-direction: column;
-            flex: 3; /* 30% of the height */
+            flex: 3; /* 30% of the width */
             background-color: #c8e6c9;
         }
 
-        /* Section 4: 20% height */
+        /* Section 4: 20% width */
         .agent-assist {
-            flex-direction: column;
-            flex: 2; /* 20% of the height */
+            flex: 2; /* 20% of the width */
             background-color: #d1c4e9;
         }
 
