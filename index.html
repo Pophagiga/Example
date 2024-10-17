@@ -14,14 +14,18 @@
         body {
             font-family: Arial, sans-serif;
             background-color: #f4f4f9;
-            padding: 20px;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
         .container {
             display: flex;
             flex-direction: column;
-            height: 100vh;
-            gap: 10px; /* Spacing between sections */
+            height: 100%; /* Full viewport height */
+            width: 60%;   /* Optional: Adjust width */
+            gap: 10px;    /* Spacing between sections */
         }
 
         /* Section Styling */
@@ -30,6 +34,8 @@
             border-radius: 8px;
             background-color: white;
             box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-direction: column;
         }
 
         /* Section 1: 10% height */
@@ -42,6 +48,7 @@
         .contact-info {
             flex: 4; /* 40% of the height */
             background-color: #ffecb3;
+            overflow-y: auto;
         }
 
         /* Section 3: 30% height */
