@@ -3,8 +3,70 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Window Layout</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Chat Window Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            padding: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            gap: 10px; /* Spacing between sections */
+        }
+
+        /* Section Styling */
+        .section {
+            padding: 15px;
+            border-radius: 8px;
+            background-color: white;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Section 1: 10% height */
+        .chat-details {
+            flex: 1; /* 10% of the height */
+            background-color: #e3f2fd;
+        }
+
+        /* Section 2: 40% height */
+        .contact-info {
+            flex: 4; /* 40% of the height */
+            background-color: #ffecb3;
+        }
+
+        /* Section 3: 30% height */
+        .order-info {
+            flex: 3; /* 30% of the height */
+            background-color: #c8e6c9;
+        }
+
+        /* Section 4: 20% height */
+        .agent-assist {
+            flex: 2; /* 20% of the height */
+            background-color: #d1c4e9;
+        }
+
+        /* Styling for the conversation section inside Section 2 */
+        .conversation {
+            margin-top: 10px;
+            max-height: 100%;
+            overflow-y: auto;
+        }
+
+        .conversation p {
+            margin-bottom: 8px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
@@ -17,7 +79,10 @@
         <!-- Section 2: Contact Information and Conversation (40%) -->
         <div class="section contact-info">
             <h2>Contact Information & Conversation</h2>
-            <p>Conversation between admin and customer will be shown here.</p>
+            <div class="conversation">
+                <p>Admin: How can I assist you today?</p>
+                <p>Customer: I need help with my order.</p>
+            </div>
         </div>
 
         <!-- Section 3: Order Information (30%) -->
@@ -32,63 +97,5 @@
             <p>Magic Workflow and other agent assist tools will be shown here.</p>
         </div>
     </div>
-    * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f9;
-    padding: 20px;
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-}
-
-/* Section Styling */
-.section {
-    padding: 15px;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-/* Section 1: 10% height */
-.chat-details {
-    flex: 1; /* 10% of the height */
-    background-color: #e3f2fd;
-}
-
-/* Section 2: 40% height */
-.contact-info {
-    flex: 4; /* 40% of the height */
-    background-color: #ffecb3;
-}
-
-/* Section 3: 30% height */
-.order-info {
-    flex: 3; /* 30% of the height */
-    background-color: #c8e6c9;
-}
-
-/* Section 4: 20% height */
-.agent-assist {
-    flex: 2; /* 20% of the height */
-    background-color: #d1c4e9;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-    .container {
-        flex-direction: column;
-    }
-}
-
 </body>
 </html>
