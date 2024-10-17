@@ -3,92 +3,92 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Agent Assist Interface</title>
+    <title>Window Layout</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-{
+    <div class="container">
+        <!-- Section 1: Incoming Chat Details (10%) -->
+        <div class="section chat-details">
+            <h2>Incoming Chat Details</h2>
+            <p>Details about the chat will be displayed here.</p>
+        </div>
+
+        <!-- Section 2: Contact Information and Conversation (40%) -->
+        <div class="section contact-info">
+            <h2>Contact Information & Conversation</h2>
+            <p>Conversation between admin and customer will be shown here.</p>
+        </div>
+
+        <!-- Section 3: Order Information (30%) -->
+        <div class="section order-info">
+            <h2>Order Information</h2>
+            <p>Order details and related information will be displayed here.</p>
+        </div>
+
+        <!-- Section 4: Agent Assist (20%) -->
+        <div class="section agent-assist">
+            <h2>Agent Assist</h2>
+            <p>Magic Workflow and other agent assist tools will be shown here.</p>
+        </div>
+    </div>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
-    margin: 0;
     padding: 20px;
 }
 
 .container {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
 }
 
-.info-section, .agent-assist-section {
-    background-color: white;
-    padding: 20px;
+/* Section Styling */
+.section {
+    padding: 15px;
     border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 48%; /* Adjust width for side-by-side layout */
+    margin-bottom: 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-h2 {
-    color: #333;
+/* Section 1: 10% height */
+.chat-details {
+    flex: 1; /* 10% of the height */
+    background-color: #e3f2fd;
 }
 
-.order-info, .product-info {
-    margin-bottom: 20px;
+/* Section 2: 40% height */
+.contact-info {
+    flex: 4; /* 40% of the height */
+    background-color: #ffecb3;
 }
 
-.agent-assist-section {
-    background-color: #e8f4ff;
+/* Section 3: 30% height */
+.order-info {
+    flex: 3; /* 30% of the height */
+    background-color: #c8e6c9;
 }
 
-p {
-    margin: 10px 0;
+/* Section 4: 20% height */
+.agent-assist {
+    flex: 2; /* 20% of the height */
+    background-color: #d1c4e9;
 }
 
+/* Responsive Design */
 @media (max-width: 768px) {
     .container {
         flex-direction: column;
     }
-
-    .info-section, .agent-assist-section {
-        width: 100%;
-        margin-bottom: 20px;
-    }
 }
 
-    <div class="container">
-        <!-- Necessary Information Section -->
-        <div class="info-section">
-            <h2>Order Information</h2>
-            <div class="order-info">
-                <p>Order ID: 123456</p>
-                <p>Product: Example Product</p>
-                <p>Price: $100</p>
-                <p>Status: Delivered</p>
-                <!-- Add more necessary info as required -->
-            </div>
-
-            <h2>Product Details</h2>
-            <div class="product-info">
-                <p>Product ID: XYZ123</p>
-                <p>Category: Electronics</p>
-                <p>Description: High-quality product</p>
-                <!-- Add more product details as required -->
-            </div>
-        </div>
-
-        <!-- Agent Assist Section -->
-        <div class="agent-assist-section">
-            <h2>Agent Assist</h2>
-            <p>Magic Workflow Step 1: Review Order</p>
-            <p>Magic Workflow Step 2: Confirm Shipment</p>
-            <p>Magic Workflow Step 3: Refund if necessary</p>
-            <!-- Add more Agent Assist details -->
-        </div>
-    </div>
-
-
-
-    <script src="script.js"></script>
 </body>
-</html>
 </html>
